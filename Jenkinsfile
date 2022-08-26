@@ -11,7 +11,11 @@ pipeline{
 
 		stage('app_testing'){
 			steps{
-			   sh 'echo "This is Test stage running on `hostname` host!"'
+			   sh '''
+			    echo "This is Test stage running on `hostname` host!"
+			    bash ${WORKSPACE}/linux/script.sh
+			
+			   '''
 			}
 		}
 }
