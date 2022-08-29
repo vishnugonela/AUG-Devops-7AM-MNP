@@ -1,10 +1,11 @@
+def course = "Devops"
 pipeline{
 	agent any
 
 	stages{
 		stage('build_app'){
 			steps{
-			   sh 'echo "This is build stage running on `hostname` host by ${NAME} user!"'	
+			   sh 'echo "This is build stage running on `hostname` host by ${NAME} user for ${course} Course!"'	
 			}
 
 		}
