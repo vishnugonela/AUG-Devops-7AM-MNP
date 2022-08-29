@@ -1,4 +1,4 @@
-def course = "Devops"
+def course = 'Devops'
 pipeline{
 	agent any
 
