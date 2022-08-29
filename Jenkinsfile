@@ -18,7 +18,7 @@ pipeline{
 			   '''
 			stage('rebuild'){
  				steps{
-					echo " This is rebuild stage "
+					sh 'echo " This is rebuild stage "'
 					}
 }
 			}
