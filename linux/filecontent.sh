@@ -9,3 +9,5 @@ echo -e " Number of words are : \c " ; cat $name | wc -w
 echo -e " Number of charecters are : \c " ; cat $name | wc -m
 
 # echo -e " Number of lines are :\c " ; wc -l $name | awk '{print $1}'
+
+
