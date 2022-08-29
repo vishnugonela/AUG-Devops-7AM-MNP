@@ -17,8 +17,9 @@ pipeline{
 			
 			   '''
 			stage('rebuild'){
-
+ 				steps{
 					echo " This is rebuild stage "
+					}
 }
 			}
 		}
