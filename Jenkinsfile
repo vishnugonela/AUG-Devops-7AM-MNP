@@ -16,6 +16,10 @@ pipeline{
 			    bash ${WORKSPACE}/linux/script.sh
 			
 			   '''
+			stage('rebuild'){
+
+					echo " This is rebuild stage "
+}
 			}
 		}
 }
