@@ -1,11 +1,14 @@
+<<<<<<< HEAD
 def course = 'Devops'
+=======
+>>>>>>> parent of bb9bf1f... Declared static variable in pipeline
 pipeline{
 	agent any
 
 	stages{
 		stage('build_app'){
 			steps{
-			   sh 'echo "This is build stage running on `hostname` host by ${NAME} user for ${course} Course!"'	
+			   sh 'echo "This is build stage running on `hostname` host by ${NAME} user!"'	
 			}
 
 		}
