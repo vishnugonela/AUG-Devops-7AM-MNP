@@ -3,4 +3,3 @@ Repository for Devops training purpose!
 ##Updated in GIT
 ## devops ##
 learning
->>>>>>> main
