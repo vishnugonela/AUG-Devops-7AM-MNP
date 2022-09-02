@@ -1,0 +1,22 @@
+pipeline {
+
+       agent any {
+
+     stages{
+         stage('server_details'){
+
+         steps{
+
+             sh '''
+             echo "hostname is: "; hostname
+             echo "host ip is: "; hostname -i
+             echo "disc space is:"; df -h
+             echo "cpu details:"; lscpu
+             '''
+
+              }
+           }
+
+        }
+  }
+}
