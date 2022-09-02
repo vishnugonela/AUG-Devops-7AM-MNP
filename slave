@@ -1,0 +1,65 @@
+pipeline{
+    agent{
+        label "Slave"
+    }
+    stages{
+        stage('run'){
+            steps{
+                sh '''
+                echo "hello"
+                echo "success"
+                '''
+            }
+        }
+        stage('runnig'){
+            agent{
+                label "pipe1"
+            }
+            steps{
+                sh '''
+                echo "world"
+                '''
+            }
+        }
+         stage('testnig'){
+            agent{
+                label "Slave1"
+            }
+            steps{
+                sh '''
+                echo "aws"
+                '''
+            }
+        }
+         stage('debuggig'){
+            agent{
+                label "Slave2"
+            }
+            steps{
+                sh '''
+                echo "devops"
+                '''
+            }
+        }
+         stage('deploy'){
+            agent{
+                label "pipe1"
+            }
+            steps{
+                sh '''
+                echo "Training"
+                '''
+            }
+        }
+         stage('build'){
+            agent{
+                label "pipe1"
+            }
+            steps{
+                sh '''
+                echo "Institute"
+                '''
+            }
+        }
+    }
+}
