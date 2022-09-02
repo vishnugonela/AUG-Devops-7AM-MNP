@@ -1,0 +1,39 @@
+pipeline {
+
+           agent any
+           
+         stages{
+        
+             stage('slave1'){
+                 agent{
+                     label "node1"
+                 }
+                 steps{
+                      sh '''
+
+                         echo "hostname is:"; hostname
+                         echo "host ip is: "; hostname -i
+
+                        '''
+                           }
+                      
+                      }
+
+                      stage('slave2'){
+                          agent{
+                              label "node2"
+                          }
+                                steps{
+                                    sh '''
+
+                                   echo "hostname is: "; hostname
+                                   echo "hostip is: "; hostname -i
+
+                                       '''
+                                        }
+                                     }
+
+
+              }
+
+ }
