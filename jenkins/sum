@@ -1,0 +1,19 @@
+pipeline{
+    agent any
+    parameters {
+  string description: 'Enter number1', name: 'num1'
+ i
+  string description: 'Enter number2', name: 'num2'
+}
+stages{
+    stage('add'){
+        steps{
+            sh'''
+                  sum=$(($num1 + $num2))
+                  echo " Sum is: $sum " 
+            '''
+        }
+    }
+}
+
+}
