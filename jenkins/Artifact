@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Download') {
+            steps {
+                sh 'echo "artifact file downloading" > File.txt'
+            }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'File.txt', onlyIfSuccessful: true
+        }
+    }
+}
