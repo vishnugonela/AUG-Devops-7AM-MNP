@@ -1,4 +1,4 @@
-FROM centos:7
-RUN yum install httpd -y
-ENV user=vishnu
-COPY index.html /var/www/html
+FROM nginx
+RUN apt-get install nginx -y
+ENV user = raj
+COPY index.html /usr/share/nginx/html
