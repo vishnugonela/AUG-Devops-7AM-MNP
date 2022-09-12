@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+  parameters {
+  string description: 'Enter ENV Value', name: 'ENV'
+}
+
+stages{
+    stage('para'){
+        steps{
+            script{
+            echo "your  name is : ${params.ENV}"
+            }
+        }
+    }
+}
+}

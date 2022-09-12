@@ -1,0 +1,17 @@
+pipeline{
+    agent any
+ parameters {
+  choice choices: ['DEVOPS', 'AWS', 'JAVA', 'Python'], name: 'ENV'
+}
+
+stages{
+    stage('run'){
+        steps{
+           build job : 'pipe2', parameters: [string ( name: 'ENV', value: "${params.ENV}" )]
+           sh '''
+             echo "hi"
+            '''
+        }
+    }
+}
+}
